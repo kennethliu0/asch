@@ -22,12 +22,15 @@ for i in range(1, 11):  # Assuming 10 test cases
     # Run the Java program with input from the input file
     start_time = time.time()
     process = subprocess.Popen(["java", java_program], stdin=open(input_file, "r"), stdout=subprocess.PIPE, text=True)
-    end_time = time.time()
     # Get the output of the Java program
     actual_output = process.communicate()[0].strip()
-
+    end_time = time.time()
     # Print Java output
-    print(actual_output, int((end_time - start_time) * 1000), "ms")
+    if (end_time - start_time) * 1000 > 4000:
+        print("TLE")
+        continue
+    print("Case", i , int((end_time - start_time) * 1000), "ms")
+    print(actual_output)
 
 # Clean up: Remove the temporary directory and its contents
 for i in range(1, 11):
