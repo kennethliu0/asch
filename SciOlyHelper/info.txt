@@ -1,0 +1,3 @@
+HashMap<TreeSet<[All Placements in Team]>[Event]>
+backtracking DFS on the best team:
+add each person do calculations then remove
