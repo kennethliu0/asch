@@ -32,7 +32,7 @@ for i in range(1, 11):  # Assuming 10 test cases
     # Read the expected output from the expected output file
     with open(expected_output_file, "r") as f:
         expected_output = f.read()
-    print(round((end_time - start_time) * 1000), ms)
+    print(round((end_time - start_time) * 1000), "ms")
     # Compare actual and expected output
     if (end_time - start_time) * 1000 > 4000:
         print("TLE")
@@ -41,6 +41,7 @@ for i in range(1, 11):  # Assuming 10 test cases
         print(f"Test case {i}: Passed")
     else:
         print(f"Test case {i}: Failed")
+        print("Actual:", actual_output, "\nExpected:", expected_output)
 
 # Clean up: Remove the temporary directory and its contents
 for i in range(1, 11):
