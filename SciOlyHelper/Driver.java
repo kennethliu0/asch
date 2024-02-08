@@ -3,7 +3,6 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.io.*;
 public class Driver {
-    static HashMap<String, TreeSet<Double>> events;
     static TreeMap<String, TreeMap<String, Double>> students;
     static String[] dir;
     public static void main(String[] args) throws Exception {
@@ -29,13 +28,18 @@ public class Driver {
 
             }   
         }
-        System.out.println(dfs(0, 0));
+        System.out.println(dfs(0, 0, 0));
 
     }
-    static double dfs(int x, int size) {
-        if (size == 15) return getTeam();
+    static Result dfs(long x, int size, int j) {
         double temp = getTeam();
-        for (Entry<String, Double> event: students.get(dir[x]).entrySet()) {
+        if (size == 15) return temp; // team is full
+        int index = 34 - j;
+        for (Entry<String, Double> event: students.get(dir[j]).entrySet()) {
+            events.get(event.getKey()).add(event.getValue());
+        }
+        double newTemp = dfs();
+        for (Entry<String, Double> event: students.get(dir[j]).entrySet()) {
             events.get(event.getKey()).add(event.getValue());
         }
     }
@@ -45,6 +49,6 @@ public class Driver {
             if (i.size() < 1) return -1;
             ans += i.first() + i.higher(i.first());
         }
-        return ans;
+        return ans / events.size();
     }
 }
