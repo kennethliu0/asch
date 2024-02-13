@@ -11,11 +11,16 @@ public class Result implements Comparable<Object>{
     public double getScore() {
         return score;
     }
+    public double changeScore(double newScore) {
+        double temp = score;
+        score = newScore;
+        return temp;
+    }
     public String toString() {
         return "Score:  " + getScore() + "\nTeam: " + getTeam();
     }
     public int compareTo(Object obj) {
         assert obj instanceof Result;
-        return Double.compare(((Result) obj).getScore(), this.getScore());
+        return Double.compare(this.getScore(), ((Result) obj).getScore());
     } 
 }

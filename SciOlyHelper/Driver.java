@@ -43,12 +43,4 @@ public class Driver {
             events.get(event.getKey()).add(event.getValue());
         }
     }
-    static double getTeam() {
-        double ans = 0;
-        for (TreeSet<Double> i: events.values()) {
-            if (i.size() < 1) return -1;
-            ans += i.first() + i.higher(i.first());
-        }
-        return ans / events.size();
-    }
 }
