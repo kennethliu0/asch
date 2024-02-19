@@ -32,6 +32,7 @@ public class countingrooms {
                 dfs(r + dx[i], c + dy[i]);
             }
         }
+        return count;
     }
     static void pathRoom(int r, int c) {
         if (visited[r][c]) return;
