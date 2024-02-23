@@ -2,27 +2,35 @@ import java.util.*;
 import java.io.*;
 public class maxhaybales {
     // idea - implement gcd to reduce slope fractions and use hashmap instead of treemap
-    static class Slope implements Comparable<Slope> {
+    static class Slope implements Comparable<Object> {
         long dy;
         long dx;
         public Slope(long dy, long dx) {
-            this.dy = dy;
-            this.dx = dx;
+            long gcd = gcd(Math.max(dx, dy), Math.min(dx, dy));
+            this.dy = dy / gcd;
+            this.dx = dx / gcd;
         }
-        public boolean equals(Slope s) {
-            return this.dy * s.dx == this.dx * s.dy;
+        public boolean equals(Object s) {// make sure this is alkways Object
+            return hashCode() == s.hashCode();
         }
-        public int compareTo(Slope s) {
-            return Long.compare(this.dy * s.dx, s.dy * this.dx);
+        public int compareTo(Object s) {
+            assert s instanceof Slope;
+            Slope tmp = (Slope)s;
+            return Long.compare(this.dy * tmp.dx, tmp.dy * this.dx);
         }
+        @Override
         public int hashCode() {
-            return Long.hashCode(dy) + Long.hashCode(dx);
+            return Long.hashCode(dy * 1000000001 + dx);
         }
     }
-    static int gcd(int x, int y) {
-        if (x % y == 0) return y;
-        if (y % x == 0) return x;
-        return gcd(Math.max(x, y) - Math.min(x, y), Math.min(x, y));
+    static long gcd(long x, long y) {
+        while (y != 0) {
+            long tmp = y;
+            y = x % y;
+            x = tmp;
+        }
+        return x;
+
     }
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -44,18 +52,16 @@ public class maxhaybales {
             i = j - 1;
         }
         for (int i = 0; i < N; i++) {
-            TreeMap<Slope, Integer> slopes = new TreeMap<>();
+            HashMap<Slope, Integer> slopes = new HashMap<>();
             for (int j = i + 1; j < N; j++) {
                 Slope slope= new Slope( (bales[j][1] - bales[i][1]) , (bales[j][0] - bales[i][0]));
                 if (!slopes.containsKey(slope)) {
                     slopes.put(slope, 1);
                 } else{
-                    slopes.put(slope, slopes.get(slope) + 1);
+                    int val = slopes.get(slope) + 1;
+                    slopes.put(slope, val);
+                    ans = Math.max(ans, val);
                 }
-            }
-            
-            for (Integer e: slopes.values()) {
-                ans = Math.max(ans, e + 1);
             }
         }
         System.out.println(ans);
