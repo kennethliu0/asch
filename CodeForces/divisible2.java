@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+// https://codeforces.com/contest/1931/problem/D
 public class divisible2 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
