@@ -1,5 +1,8 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
 public class maxhaybales {
     // idea - implement gcd to reduce slope fractions and use hashmap instead of treemap
     static class Slope implements Comparable<Object> {
@@ -11,7 +14,7 @@ public class maxhaybales {
             this.dx = dx / gcd;
         }
         public boolean equals(Object s) {// make sure this is alkways Object
-            return hashCode() == s.hashCode();
+            return this.dy == ((Slope) s).dy && this.dx == ((Slope) s).dx;
         }
         public int compareTo(Object s) {
             assert s instanceof Slope;
@@ -20,16 +23,11 @@ public class maxhaybales {
         }
         @Override
         public int hashCode() {
-            return Long.hashCode(dy * 1000000001 + dx);
+            return Long.hashCode(dy * 1003L + dx);
         }
     }
     static long gcd(long x, long y) {
-        while (y != 0) {
-            long tmp = y;
-            y = x % y;
-            x = tmp;
-        }
-        return x;
+        return y ==0 ? x: gcd(y, x % y);
 
     }
     public static void main(String[] args) throws Exception {
@@ -42,29 +40,16 @@ public class maxhaybales {
             bales[i][1] = Long.parseLong(st.nextToken());
         }
         br.close();
-        Arrays.sort(bales, (e1, e2) -> Long.compare(e1[0], e2[0]));
         int ans = 0;
-        // vertical lines
-        for (int i = 0; i < N - 1; i++) {
-            int j = i + 1;
-            while (bales[j][0] == bales[i][0]) j++;
-            ans = Math.max(ans, j - i);
-            i = j - 1;
-        }
         for (int i = 0; i < N; i++) {
             HashMap<Slope, Integer> slopes = new HashMap<>();
             for (int j = i + 1; j < N; j++) {
                 Slope slope= new Slope( (bales[j][1] - bales[i][1]) , (bales[j][0] - bales[i][0]));
-                if (!slopes.containsKey(slope)) {
-                    slopes.put(slope, 1);
-                } else{
-                    int val = slopes.get(slope) + 1;
-                    slopes.put(slope, val);
-                    ans = Math.max(ans, val);
-                }
+                slopes.put(slope, slopes.getOrDefault(slope, 0) + 1);
+                ans = Math.max(ans, slopes.get(slope));
             }
         }
-        System.out.println(ans);
+        System.out.println(ans + 1);
     }
 }
 
