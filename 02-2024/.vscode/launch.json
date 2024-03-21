@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "moorbles",
+            "request": "launch",
+            "mainClass": "moorbles",
+            "projectName": "02-2024_e83f26f"
+        },
+        {
+            "type": "java",
             "name": "target2",
             "request": "launch",
             "mainClass": "target2",
