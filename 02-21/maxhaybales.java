@@ -1,28 +1,34 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
 public class maxhaybales {
     // idea - implement gcd to reduce slope fractions and use hashmap instead of treemap
-    static class Slope implements Comparable<Slope> {
+    static class Slope implements Comparable<Object> {
         long dy;
         long dx;
         public Slope(long dy, long dx) {
-            this.dy = dy;
-            this.dx = dx;
+            long gcd = gcd(Math.max(dx, dy), Math.min(dx, dy));
+            this.dy = dy / gcd;
+            this.dx = dx / gcd;
         }
-        public boolean equals(Slope s) {
-            return this.dy * s.dx == this.dx * s.dy;
+        public boolean equals(Object s) {// make sure this is alkways Object
+            return this.dy == ((Slope) s).dy && this.dx == ((Slope) s).dx;
         }
-        public int compareTo(Slope s) {
-            return Long.compare(this.dy * s.dx, s.dy * this.dx);
+        public int compareTo(Object s) {
+            assert s instanceof Slope;
+            Slope tmp = (Slope)s;
+            return Long.compare(this.dy * tmp.dx, tmp.dy * this.dx);
         }
+        @Override
         public int hashCode() {
-            return Long.hashCode(dy) + Long.hashCode(dx);
+            return Long.hashCode(dy * 1003L + dx);
         }
     }
-    static int gcd(int x, int y) {
-        if (x % y == 0) return y;
-        if (y % x == 0) return x;
-        return gcd(Math.max(x, y) - Math.min(x, y), Math.min(x, y));
+    static long gcd(long x, long y) {
+        return y ==0 ? x: gcd(y, x % y);
+
     }
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,31 +40,16 @@ public class maxhaybales {
             bales[i][1] = Long.parseLong(st.nextToken());
         }
         br.close();
-        Arrays.sort(bales, (e1, e2) -> Long.compare(e1[0], e2[0]));
         int ans = 0;
-        // vertical lines
-        for (int i = 0; i < N - 1; i++) {
-            int j = i + 1;
-            while (bales[j][0] == bales[i][0]) j++;
-            ans = Math.max(ans, j - i);
-            i = j - 1;
-        }
         for (int i = 0; i < N; i++) {
-            TreeMap<Slope, Integer> slopes = new TreeMap<>();
+            HashMap<Slope, Integer> slopes = new HashMap<>();
             for (int j = i + 1; j < N; j++) {
                 Slope slope= new Slope( (bales[j][1] - bales[i][1]) , (bales[j][0] - bales[i][0]));
-                if (!slopes.containsKey(slope)) {
-                    slopes.put(slope, 1);
-                } else{
-                    slopes.put(slope, slopes.get(slope) + 1);
-                }
-            }
-            
-            for (Integer e: slopes.values()) {
-                ans = Math.max(ans, e + 1);
+                slopes.put(slope, slopes.getOrDefault(slope, 0) + 1);
+                ans = Math.max(ans, slopes.get(slope));
             }
         }
-        System.out.println(ans);
+        System.out.println(ans + 1);
     }
 }
 
