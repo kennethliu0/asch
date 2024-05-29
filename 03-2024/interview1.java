@@ -15,12 +15,10 @@ public class interview1 {
         br.close();
         TreeMap<Long, HashSet<Integer>> times = new TreeMap<>();
         for (int i = 0; i < K; i++) {
-            if (times.containsKey(t[i])) {
-                times.get(t[i]).add(i);
-            } else {
+            if (! times.containsKey(t[i])) {
                 times.put(t[i], new HashSet<Integer>());
-                times.get(t[i]).add(i);
-            }
+            } 
+            times.get(t[i]).add(i);
         }
         TreeMap<Long, HashSet<Integer>> events = new TreeMap<>((e1, e2)-> Long.compare(e2, e1));
         for (int i = K; i < N; i++) {
@@ -32,12 +30,10 @@ public class interview1 {
             }
             for (int j: times.firstEntry().getValue()) {
                 if (i >= N ) break;
-                if (times.containsKey(t[i] + times.firstKey())) {
-                    times.get(t[i] + times.firstKey()).add(j);
-                } else {
+                if (! times.containsKey(t[i] + times.firstKey())) {
                     times.put(t[i] + times.firstKey(), new HashSet<Integer>());
-                    times.get(t[i]  + times.firstKey()).add(j);
                 }
+                times.get(t[i]  + times.firstKey()).add(j);
                 i++;
             }
             i--;
