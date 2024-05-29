@@ -38,7 +38,7 @@ public class countingrooms {
         if (visited[r][c]) return;
         visited[r][c] = true;
         for (int i = 0; i < 4; i++) {
-            if (inRange(r + dx[i], c + dy[i]))
+            if (inRange(r + dx[i], c + dy[i]));
         }
     }
     static boolean inRange(int r, int c) {
