@@ -22,6 +22,10 @@ public class interview {
                 sizes[i] = 1;
             }
         }
+        public int find (int x) {
+            while (unionfind[x] != x) x = unionfind[x];
+            return x;
+        }
         public void merge(int x, int y) {
             while (unionfind[y] != y) y = unionfind[y];
             while (unionfind[x] != x) x = unionfind[x];
@@ -36,6 +40,7 @@ public class interview {
         }
         public boolean[] getComp(int x) {
             boolean[] b = new boolean[unionfind.length];
+            Arrays.fill(b, false);
             while (unionfind[x] != x) x = unionfind[x];
             for (int i = 0; i < unionfind.length; i++) {
                 int temp = i;
@@ -47,7 +52,7 @@ public class interview {
     } 
     
     public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new FileReader("10.in"));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
@@ -86,12 +91,15 @@ public class interview {
             
         }
         long ans = tm.firstKey();
-        farmers = comp.getComp(tm.firstEntry().getValue().id);
+        farmers = comp.getComp(tm.get(ans).id);
         StringBuilder sb = new StringBuilder();
+        /*
         for (boolean b: farmers) {
             sb.append(b ? "1" :  "0");
-        }
+        } */
         System.out.println(ans); 
+        for (int i = 0; i < K; i++) {sb.append(comp.find(i) + " ");}
         System.out.println(sb);
+        
     }
 }
