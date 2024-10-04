@@ -1,1 +1,1 @@
-This is my workspace to help sync code between my laptop and desktop
+This is my competitive programming workspace to help sync code between my laptop and desktop
