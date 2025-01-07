@@ -1,252 +1,259 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "ABcoins",
-            "request": "launch",
-            "mainClass": "ABcoins",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "anji",
-            "request": "launch",
-            "mainClass": "anji",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "anna",
-            "request": "launch",
-            "mainClass": "anna",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "block",
-            "request": "launch",
-            "mainClass": "block",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "cats",
-            "request": "launch",
-            "mainClass": "cats",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "closest",
-            "request": "launch",
-            "mainClass": "closest",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "constraints",
-            "request": "launch",
-            "mainClass": "constraints",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "coverwater",
-            "request": "launch",
-            "mainClass": "coverwater",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "divisible",
-            "request": "launch",
-            "mainClass": "divisible",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "divisible2",
-            "request": "launch",
-            "mainClass": "divisible2",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "dualez",
-            "request": "launch",
-            "mainClass": "dualez",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "goodsubarrays",
-            "request": "launch",
-            "mainClass": "goodsubarrays",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "goodtrip",
-            "request": "launch",
-            "mainClass": "goodtrip",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "goodtriples",
-            "request": "launch",
-            "mainClass": "goodtriples",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "gridlandia",
-            "request": "launch",
-            "mainClass": "gridlandia",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "laura",
-            "request": "launch",
-            "mainClass": "laura",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "milena",
-            "request": "launch",
-            "mainClass": "milena",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "mixwater",
-            "request": "launch",
-            "mainClass": "mixwater",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "nusret",
-            "request": "launch",
-            "mainClass": "nusret",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "potions",
-            "request": "launch",
-            "mainClass": "potions",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolf121",
-            "request": "launch",
-            "mainClass": "rudolf121",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolfball",
-            "request": "launch",
-            "mainClass": "rudolfball",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolfbridges",
-            "request": "launch",
-            "mainClass": "rudolfbridges",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolfimbalance",
-            "request": "launch",
-            "mainClass": "rudolfimbalance",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolfticket",
-            "request": "launch",
-            "mainClass": "rudolfticket",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "rudolfuglystring",
-            "request": "launch",
-            "mainClass": "rudolfuglystring",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "sendmessage",
-            "request": "launch",
-            "mainClass": "sendmessage",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "square",
-            "request": "launch",
-            "mainClass": "square",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "summation",
-            "request": "launch",
-            "mainClass": "summation",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "ticket",
-            "request": "launch",
-            "mainClass": "ticket",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "triangle",
-            "request": "launch",
-            "mainClass": "triangle",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "verydiff",
-            "request": "launch",
-            "mainClass": "verydiff",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "zelda",
-            "request": "launch",
-            "mainClass": "zelda",
-            "projectName": "CodeForces_a6d57451"
-        },
-        {
-            "type": "java",
-            "name": "zelda2",
-            "request": "launch",
-            "mainClass": "zelda2",
-            "projectName": "CodeForces_a6d57451"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "minmaxsort",
+      "request": "launch",
+      "mainClass": "minmaxsort",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "ABcoins",
+      "request": "launch",
+      "mainClass": "ABcoins",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "anji",
+      "request": "launch",
+      "mainClass": "anji",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "anna",
+      "request": "launch",
+      "mainClass": "anna",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "block",
+      "request": "launch",
+      "mainClass": "block",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "cats",
+      "request": "launch",
+      "mainClass": "cats",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "closest",
+      "request": "launch",
+      "mainClass": "closest",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "constraints",
+      "request": "launch",
+      "mainClass": "constraints",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "coverwater",
+      "request": "launch",
+      "mainClass": "coverwater",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "divisible",
+      "request": "launch",
+      "mainClass": "divisible",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "divisible2",
+      "request": "launch",
+      "mainClass": "divisible2",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "dualez",
+      "request": "launch",
+      "mainClass": "dualez",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "goodsubarrays",
+      "request": "launch",
+      "mainClass": "goodsubarrays",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "goodtrip",
+      "request": "launch",
+      "mainClass": "goodtrip",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "goodtriples",
+      "request": "launch",
+      "mainClass": "goodtriples",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "gridlandia",
+      "request": "launch",
+      "mainClass": "gridlandia",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "laura",
+      "request": "launch",
+      "mainClass": "laura",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "milena",
+      "request": "launch",
+      "mainClass": "milena",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "mixwater",
+      "request": "launch",
+      "mainClass": "mixwater",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "nusret",
+      "request": "launch",
+      "mainClass": "nusret",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "potions",
+      "request": "launch",
+      "mainClass": "potions",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolf121",
+      "request": "launch",
+      "mainClass": "rudolf121",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolfball",
+      "request": "launch",
+      "mainClass": "rudolfball",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolfbridges",
+      "request": "launch",
+      "mainClass": "rudolfbridges",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolfimbalance",
+      "request": "launch",
+      "mainClass": "rudolfimbalance",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolfticket",
+      "request": "launch",
+      "mainClass": "rudolfticket",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "rudolfuglystring",
+      "request": "launch",
+      "mainClass": "rudolfuglystring",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "sendmessage",
+      "request": "launch",
+      "mainClass": "sendmessage",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "square",
+      "request": "launch",
+      "mainClass": "square",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "summation",
+      "request": "launch",
+      "mainClass": "summation",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "ticket",
+      "request": "launch",
+      "mainClass": "ticket",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "triangle",
+      "request": "launch",
+      "mainClass": "triangle",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "verydiff",
+      "request": "launch",
+      "mainClass": "verydiff",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "zelda",
+      "request": "launch",
+      "mainClass": "zelda",
+      "projectName": "CodeForces_a6d57451"
+    },
+    {
+      "type": "java",
+      "name": "zelda2",
+      "request": "launch",
+      "mainClass": "zelda2",
+      "projectName": "CodeForces_a6d57451"
+    }
+  ]
 }
